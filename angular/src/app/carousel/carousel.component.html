@@ -1,0 +1,13 @@
+
+<div class="page-container">
+        <div class="page-container__carousel" *ngFor="let item of currentItemsOnCarousel; trackBy:trackByFn">
+            <app-carousel-item class="carousel-container" 
+            [itemImage]="item.imagePath">
+            </app-carousel-item>
+        </div>
+</div>
+
+<div class="page-container__buttons-container">
+    <button (click)="rotateCarousel('prev')">Prev</button>
+    <button (click)="rotateCarousel('next')">Next</button>
+</div>
